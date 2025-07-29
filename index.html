@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dot & Key</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css" />
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      color: #111;
+    }
+
+    .slider-section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 60px 20px;
+      position: relative;
+    }
+
+    .slider-wrapper {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      gap: 30px;
+      padding-bottom: 20px;
+    }
+
+    .slide {
+      flex: 0 0 90%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      scroll-snap-align: center;
+      border-radius: 30px;
+      padding: 50px;
+      min-width: 320px;
+      background: #f5f5f5;
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .slide .text {
+      flex: 1;
+      max-width: 55%;
+    }
+
+    .slide .text .tag {
+      background: #fff;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+
+    .slide h2 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .slide p {
+      font-size: 16px;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .slide .btn {
+      background: #000;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 15px;
+      display: inline-block;
+    }
+
+    .slide .image {
+      flex: 1;
+      text-align: right;
+    }
+
+    .slide .image img {
+      width: 260px;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    .mint { background-color: #ceefdd; }
+    .peach { background-color: #ffb967; }
+    .blue { background-color: #c5f4ff; }
+
+    @media (max-width: 768px) {
+      .slide {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+      }
+
+      .slide .text,
+      .slide .image {
+        max-width: 100%;
+      }
+
+      .slide .image img {
+        width: 100%;
+        max-width: 300px;
+        margin-top: 20px;
+      }
+    }
+    
+  </style>
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="container">
+      <div class="logo">
+        <img src="https://www.dotandkey.com/cdn/shop/files/Vector_5.svg?v=1720438003&width=450" alt="Dot & Key Logo" />
+      </div>
+
+      <div class="search-box">
+        <input type="text" placeholder="Search for products" />
+        <button><span>🔍</span></button>
+      </div>
+
+      <nav class="nav-links">
+  <div class="dropdown">
+    <a href="#">Product ▼</a>
+    <div class="dropdown-menu">
+      <a href="#">All Products</a>
+      <a href="#">Best Sellers</a>
+      <a href="#">New Arrivals</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="#">Collections ▼</a>
+    <div class="dropdown-menu">
+      <a href="#">Vitamin C</a>
+      <a href="#">Acne Care</a>
+      <a href="#">Hydration</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="#">About Us ▼</a>
+    <div class="dropdown-menu">
+      <a href="#">Our Story</a>
+      <a href="#">Our Mission</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+  <a href="/cart.html" class="cart-icon">🛒</a>
+  <a href="/signin.html" class="signin-btn">Sign In</a>
+</nav>
+    </div>
+  </header>
+  <section class="slider-section">
+    <div class="slider-wrapper">
+      <!-- Slide 1 -->
+       <div class="slide peach">
+        <div class="text">
+          <span class="tag">Smart Deals</span>
+          <h2>Get Up to 30% OFF On Acne Serums</h2>
+          <p>10% Vitamin C + E Face Serum with 5% Niacinamide</p>
+          <a href="https://www.dotandkey.com/collections/vitamin-c-serum" class="btn">Explore Collection →</a>
+        </div>
+        <div class="image">
+          <img src="https://www.dotandkey.com/cdn/shop/files/4_4c291fe9-baf6-4308-bdee-f95fb866113d.jpg?v=1744620473&width=700" alt="Vitamin C Serum">
+        </div>
+      </div>
+      
+
+      <!-- Slide 2 -->
+       <div class="slide mint">
+        <div class="text">
+          <span class="tag">Smart Deals</span>
+          <h2>Get Up to 30% OFF On Acne Serums</h2>
+          <p>Cica + 10% Niacinamide Face Serum for Oily Skin</p>
+          <a href="https://www.dotandkey.com/collections/acne-serums" class="btn">Explore Collection →</a>
+        </div>
+        <div class="image">
+          <img src="https://www.dotandkey.com/cdn/shop/files/1c_2.jpg?v=1727355078&width=700" alt="Cica Serum">
+        </div>
+      </div>
+      
+
+      <!-- Slide 3 -->
+      <div class="slide blue">
+        <div class="text">
+          <span class="tag">Smart Deals</span>
+          <h2>Get Up to 30% OFF On Acne Serums</h2>
+          <p>Hyaluronic & Ceramides Hydrating Face Serum</p>
+          <a href="https://www.dotandkey.com/collections/hydration" class="btn">Explore Collection →</a>
+        </div>
+        <div class="image">
+          <img src="https://www.dotandkey.com/cdn/shop/files/1c_feeeecf5-a597-40aa-94f2-fc367e5df797.jpg?v=9999" alt="Hydrating Serum">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--  NEW ARRIVALS SECTION -->
+<section class="new-arrivals">
+  <h2>New Arrivals</h2>
+  <p>Just in – Your skincare essentials, freshly stocked!</p>
+  <div class="product-grid">
+    <!-- Product 1 -->
+    <div class="product-card">
+      <img src="https://www.dotandkey.com/cdn/shop/files/1-1_7f312f45-a060-4520-819a-eac06ecbcf43.jpg?v=1747048528&width=700" alt="Barrier Repair Oil-Free Moisturizer">
+      <h3>Barrier Repair Oil-Free Moisturizer with Ceramides</h3>
+      <p class="desc">Reduces: Skin Damage, Redness<br>Repairs Skin | Soothing | Ultra-Light<br><strong>Oily & Combination Skin</strong></p>
+      <p class="price">₹399 <span>MRP incl. of all taxes</span></p>
+      <button class="add-to-cart" onclick="addToCart('Barrier Repair Oil-Free Moisturizer', 399)">Add to Cart</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <img src="https://www.dotandkey.com/cdn/shop/files/1copy_da9956a7-7de6-4cdb-b8d2-1a7dcfda7c56.jpg?v=1746425402&width=700" alt="Strawberry Dew Sunscreen Mist">
+      <h3>Strawberry Dew Sunscreen Face Mist, SPF 50+ PA+++</h3>
+      <p class="desc">Reduces: Dark Spots, Tanning<br>Makeup Proof | Easy Re-application | Brightens<br><strong>All Skin Types</strong></p>
+      <p class="price">₹599 <span>MRP incl. of all taxes</span></p>
+      <button class="add-to-cart" onclick="addToCart('Strawberry Dew Sunscreen Mist', 599)">Add to Cart</button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <img src="https://www.dotandkey.com/cdn/shop/files/1_7399b118-b3e1-465a-930f-6d4e1a093e22.jpg?v=1741177103&width=700" alt="Strawberry Dew Tinted Sunscreen">
+      <h3>Strawberry Dew Tinted Sunscreen SPF 50+ PA++++</h3>
+      <p class="desc">Reduces: Dark Spots, Tanning<br>Ultra-light Texture | No White Cast | Instant Radiance</p>
+      <p class="price">₹549 <span>MRP incl. of all taxes</span></p>
+      <button class="add-to-cart" onclick="addToCart('Strawberry Dew Tinted Sunscreen', 549)">Add to Cart</button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card">
+      <img src="https://www.dotandkey.com/cdn/shop/files/1-80g.jpg?v=1744373105&width=700" alt="Mango Detan Gel Sunscreen">
+      <h3>Mango + Detan Gel Sunscreen (Oil Free), SPF 50+ PA+++</h3>
+      <p class="desc">Reduces: Dark Spots, Tanning<br>High UV Protection | Natural Finish | Brightens Skin</p>
+      <p class="price">₹595 <span>MRP incl. of all taxes</span></p>
+      <button class="add-to-cart" onclick="addToCart('Mango Detan Gel Sunscreen', 595)">Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+<!-- JavaScript for Add to Cart -->
+<script>
+  function addToCart(productName, price) {
+    const product = { name: productName, price: price };
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push(product);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(productName + ' added to cart!');
+  }
+</script>
+
+<section class="compact-banner-wrapper">
+    <!-- Banner 1 -->
+    <div class="compact-banner" style="background: rgb(255, 241, 242);">
+      <div class="banner-text">
+        <span class="tag">DOT & KEY</span>
+        <h3 class="title">Watermelon Cooling 4-Step Skin Care Regime</h3>
+        <a href="#" class="btn">Shop Now</a>
+      </div>
+      <div class="banner-img">
+        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSuxQosYEpCcfRP5Gq9KsnK2q-TefCkpCizRZYPuaVm3uKLY2mYH5iYGHsKonnSmdqp3x0a-UgmaXRyKQE712kuxnLOaFaX9upgKS22VJnBfmQAU4s3NJRN7QAI5eO0etb7iGOCiA&usqp=CAc" alt="Watermelon Kit">
+      </div>
+    </div>
+
+    <!-- Banner 2 -->
+    <div class="compact-banner" style="background: #a8dd65;">
+      <div class="banner-text">
+        <span class="tag">DOT & KEY</span>
+        <h3 class="title">Super Cica & Salicylic Anti Acne Routine</h3>
+        <a href="#" class="btn">Shop Now</a>
+      </div>
+      <div class="banner-img">
+        <img src="https://www.dotandkey.com/cdn/shop/files/PO_c739d7bb-2fbc-438b-998d-1f66d371d11e.jpg?v=1747394297&width=700" alt="Cica Kit">
+      </div>
+    </div>
+
+    <!-- Banner 3 -->
+    <div class="compact-banner" style="background: #c7e3ef;">
+      <div class="banner-text">
+        <span class="tag">DOT & KEY</span>
+        <h3 class="title">All Day Hydration CTM Essentials</h3>
+        <a href="#" class="btn">Shop Now</a>
+      </div>
+      <div class="banner-img">
+        <img src="https://www.dotandkey.com/cdn/shop/products/1_45.jpg?v=1692438042&width=700" alt="Hydration Kit">
+      </div>
+    </div>
+  </section>
+  <section class="featured-section">
+    <div class="featured-left">
+      <span class="top-tag">Featured Collections</span>
+      <h2 class="main-heading">Discover Our Best-Selling Beauty Picks</h2>
+      <p class="subtext">Carefully selected products, trusted by real users</p>
+
+      <div class="thumbnail-row">
+        <img src="https://www.dotandkey.com/cdn/shop/files/1-BR-Serum_97878dcb-4561-4500-800d-92ac04a4ce92.jpg?v=1734761250&width=700" alt="Blueberry Serum">
+        <img src="https://cdn.shopify.com/s/files/1/0361/8553/8692/files/1c_bf1a6898-07b2-4b81-9196-efa403cb403c_large.jpg?v=1721218648" alt="Watermelon Serum">
+        <img src="https://www.dotandkey.com/cdn/shop/files/Artboard_1_f94f4456-d328-4271-ab7e-94bde8c9bbd3.jpg?v=1745323515&width=700" alt="Strawberry Serum">
+      </div>
+
+      <a href="#" class="btn">Shop Collection →</a>
+    </div>
+
+    <div class="featured-right">
+      <img src="https://media6.ppl-media.com//tr:h-750,w-750,c-at_max,dpr-2,q-40/static/img/product/340906/dot-and-key-cica-niacinamide-skin-care-gift-set_8_display_1703603160_66803fc0.jpg" alt="CICA Set">
+      <div class="price-tag">
+        <span class="category">Serum, Night Gel</span>
+        <strong class="product-name">CICA Niacinamide Skin Care Gift Set - 80 gm</strong>
+        <span class="price">₹765</span>
+      </div>
+    </div>
+  </section>
+<!-- Why Us Section -->
+  <section id="why-us" class="why-us-section">
+    <p class="top-tag">Why Us</p>
+    <h2 class="section-title">Dot & Key is Loved by Thousands Skincare You Can Trust, Results You’ll Love</h2>
+
+    <div class="why-us-grid">
+      <!-- 1. Smart Picks -->
+      <div class="why-box box-green">
+        <div class="icon"><i class="fa-solid fa-arrows-rotate"></i></div>
+        <h3>Smart picks for your skin.</h3>
+        <p>Smart product suggestions based on your skin type and shopping habits.</p>
+        <a href="#" class="learn-btn">Learn More</a>
+      </div>
+
+      <!-- 2. Beauty Match -->
+      <div class="why-box box-blue">
+        <div class="icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <h3>Your Beauty Match</h3>
+        <p>Curated collections tailored to your beauty needs – just for you.</p>
+        <a href="#" class="learn-btn">Learn More</a>
+      </div>
+
+      <!-- 3. Delivery -->
+      <div class="why-box box-peach">
+        <div class="icon"><i class="fa-solid fa-box"></i></div>
+        <h3>Fast & Reliable Delivery</h3>
+        <p>Get your orders on time, every time — no delays.</p>
+        <a href="#" class="learn-btn">Learn More</a>
+      </div>
+
+      <!-- 4. Money Back -->
+      <div class="why-box box-yellow">
+        <div class="icon"><i class="fa-solid fa-sack-dollar"></i></div>
+        <h3>Money-Back Guarantee</h3>
+        <p>Not satisfied? Get a full refund, no questions asked.</p>
+        <a href="#" class="learn-btn">Learn More</a>
+      </div>
+
+      <!-- 5. Secure Checkout -->
+      <div class="why-box box-lightblue">
+        <div class="icon"><i class="fa-solid fa-lock"></i></div>
+        <h3>Secure Checkout</h3>
+        <p>Encrypted payments. Shop confidently with us.</p>
+        <a href="#" class="learn-btn">Learn More</a>
+      </div>
+    </div>
+  </section>
+  <!-- NEWSLETTER SECTION -->
+  <section class="newsletter">
+    <div class="newsletter-container">
+      <div class="newsletter-image">
+        <img src="https://cdn.shopify.com/s/files/1/0648/1955/files/Cover_Photo_100_PURE_The_Benefits_of_Using_Natural_Hand_Cream_for_Soft_Nourished_Hands.jpg?v=1687423525" alt="Hand Cream">
+      </div>
+      <div class="newsletter-box">
+        <h2>Beauty in Your Inbox</h2>
+        <p>Get exclusive offers, product drops, and skincare tip — straight to your inbox.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe Now</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER SECTION -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="https://www.dotandkey.com/cdn/shop/files/Vector_5.svg?v=1720438003&width=450" alt="Dot & Key Logo" class="footer-logo">
+        <p>We Use Clean, Effective Ingredients To Deliver Visible Results — Empowering Your Skin To Glow Every Single Day.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <a href="#" class="back-to-top">Back to Top <i class="fa-solid fa-chevron-up"></i></a>
+      </div>
+
+      <div class="footer-links">
+        <div class="link-column">
+          <h4>SITE MAP</h4>
+          <ul>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">New arrivals</a></li>
+            <li><a href="#">Product</a></li>
+          </ul>
+        </div>
+        <div class="link-column">
+          <h4>SUPPORT</h4>
+          <ul>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>©2025 All Copyright Reserve Dot & Key Beauty.</p>
+    </div>
+  </footer>
+  
+  
+</body>
+</html>
